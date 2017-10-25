@@ -34,6 +34,15 @@ RSpec.describe Nutrientes do
     it "shows its proteins ammount" do
       expect(@cerdo.proteins).to eq(12)
     end
+    
+    it "shows its glucids ammout" do
+      expect(@cerdo.glucids).to eq(10)
+    end
+    
+    it "shows its lipids ammout" do
+      expect(@cerdo.glucids).to eq(9)
+    end
+    
   end
 end
 
