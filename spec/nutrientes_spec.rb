@@ -47,6 +47,10 @@ RSpec.describe Nutrientes do
       expect(@cerdo.to_s).to eq("cerdo, 12g proteins, 10g glucids, 9g lipids")
     end
     
+    it "shows the caloric value" do
+      expect(@cerdo.caloric_value).to eq(169)
+    end
+    
   end
 end
 
