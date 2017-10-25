@@ -18,5 +18,10 @@ RSpec.describe Nutrientes do
     it "has a proteins ammount" do
       expect(@cerdo.proteins).not_to be nil
     end
+    
+    it "has a glucids ammount" do
+      expect(@cerdo.glucids).not_to be nil
+    end
   end
 end
+
