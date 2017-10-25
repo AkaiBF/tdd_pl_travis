@@ -32,7 +32,7 @@ RSpec.describe Nutrientes do
     end
     
     it "shows its proteins ammount" do
-      expect(@cerdo.get_proteins).to eq(12)
+      expect(@cerdo.proteins).to eq(12)
     end
   end
 end
