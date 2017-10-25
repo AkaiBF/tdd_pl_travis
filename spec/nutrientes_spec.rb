@@ -8,7 +8,7 @@ RSpec.describe Nutrientes do
   describe Alimento do
     
     before(:all) do
-      @cerdo = Alimento.new("cerdo", 12)
+      @cerdo = Alimento.new("cerdo", 12, 10)
     end
         
     it "has a name" do
