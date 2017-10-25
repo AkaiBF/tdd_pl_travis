@@ -1,6 +1,6 @@
 class Alimento
     attr_reader :name
    def initialize
-       @name = "alimento"
+       @name = name
    end
 end
