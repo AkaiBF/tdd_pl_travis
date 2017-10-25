@@ -26,6 +26,10 @@ RSpec.describe Nutrientes do
     it "has a lipids ammount" do
       expect(@cerdo.lipids).not_to be nil
     end
+    
+    it "shows its name" do
+      expect(@cerdo.to_s).to eq("cerdo")
+    end
   end
 end
 
