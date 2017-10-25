@@ -28,7 +28,7 @@ RSpec.describe Nutrientes do
     end
     
     it "shows its name" do
-      expect(@cerdo.to_s).to eq("cerdo")
+      expect(@cerdo.name).to eq("cerdo")
     end
     
     it "shows its proteins ammount" do
@@ -41,6 +41,10 @@ RSpec.describe Nutrientes do
     
     it "shows its lipids ammout" do
       expect(@cerdo.glucids).to eq(9)
+    end
+    
+    it "shows the data" do
+      expect(@cerdo.to_s).to eq("cerdo, 12g proteins, 10g glucids, 9g lipids")
     end
     
   end
