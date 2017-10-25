@@ -8,6 +8,7 @@ class Alimento
    end
    
    def to_s() 
-       return @name
+       return String.new(@name + ", " + @proteins + "g proteins, " + @glucids + "g glucids, " + @lipids + "g lipids")
    end
+   
 end
