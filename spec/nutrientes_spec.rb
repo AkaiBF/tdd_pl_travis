@@ -4,8 +4,19 @@ RSpec.describe Nutrientes do
   it "has a version number" do
     expect(Nutrientes::VERSION).not_to be nil
   end
-
-  it "does something useful" do
-    expect(false).to eq(true)
+  
+  describe Alimento do
+    
+    before(:all) do
+      @cerdo = Alimento.new("cerdo", 12)
+    end
+        
+    it "has a name" do
+      expect(@cerdo.name).not_to be nil
+    end
+    
+    it "has a proteins ammount" do
+      expect(@cerdo.proteins).not_to be nil
+    end
   end
 end

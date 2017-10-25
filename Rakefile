@@ -9,3 +9,8 @@ desc "Execute nutrientes"
 task :nutrientes do
     sh "ruby lib/nutrientes.rb"
 end
+
+desc "Tests Glucosa.rb"
+task :spec do
+    sh "ruby -I. test/tc_Glucosa.rb"
+end
