@@ -11,6 +11,8 @@ class Alimento
        return String.new(@name + ", " + @proteins.to_s + "g proteins, " + @glucids.to_s + "g glucids, " + @lipids.to_s + "g lipids")
    end
    
+   def caloric_value()
+       return (@proteins * 4 + @lipids * 9 + @glucids * 4)
+   end
+   
 end
-
-Alimento.new("cerdo", 12, 10, 9).to_s
