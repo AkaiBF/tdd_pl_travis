@@ -8,7 +8,7 @@ RSpec.describe Nutrientes do
   describe Alimento do
     
     before(:all) do
-      @cerdo = Alimento.new("cerdo", 12, 10)
+      @cerdo = Alimento.new("cerdo", 12, 10, 9)
     end
         
     it "has a name" do
@@ -21,6 +21,10 @@ RSpec.describe Nutrientes do
     
     it "has a glucids ammount" do
       expect(@cerdo.glucids).not_to be nil
+    end
+    
+    it "has a lipids ammount" do
+      expect(@cerdo.lipids).not_to be nil
     end
   end
 end
