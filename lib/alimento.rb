@@ -6,4 +6,8 @@ class Alimento
        @glucids = glucids
        @lipids = lipids
    end
+   
+   def to_s() 
+       return @name
+   end
 end
