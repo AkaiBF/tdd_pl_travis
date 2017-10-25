@@ -30,6 +30,10 @@ RSpec.describe Nutrientes do
     it "shows its name" do
       expect(@cerdo.to_s).to eq("cerdo")
     end
+    
+    it "shows its proteins ammount" do
+      expect(@cerdo.get_proteins).to eq(12)
+    end
   end
 end
 
