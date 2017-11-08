@@ -6,6 +6,27 @@ class Node
     end
 end
 
+class List
+    attr_reader :head, :tail
+    def initialize()
+        @size += 1
+        @head = nil
+        @tail = nil
+    end
+    
+    def push(nodo) 
+        if @size == 0 then
+            @head = nodo
+            @tail = nodo
+        else
+            @tail.nodo[:next_] = nodo
+            nodo.nodo[:_prev] = @tail
+            @tail = nodo
+        end
+    end
+end
+    
+
 class Alimento
     attr_reader :name, :proteins, :glucids, :lipids
    def initialize (name, proteins, glucids, lipids)
