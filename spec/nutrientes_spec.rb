@@ -54,7 +54,7 @@ RSpec.describe Nutrientes do
   
   describe OvoLacteo do
     before(:all) do
-      @ejemplo = OvoLacteo.new
+      @ejemplo = OvoLacteo.new("Huevo frito, 14.1, 0.0, 19.5")
     end
     
     it "has the correct class" do
