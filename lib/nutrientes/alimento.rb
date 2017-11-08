@@ -26,7 +26,7 @@ class List
         @size += 1
     end
     
-    def insert
+    def insert(nodo)
         if @size == 0 then
             @head = nodo
             @tail = nodo
