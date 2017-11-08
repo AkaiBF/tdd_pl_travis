@@ -34,3 +34,9 @@ class Pescado < Alimento
         super(name, proteins, glucids, lipids)
     end
 end
+
+class Graso < Alimento
+    def initialize(name, proteins, glucids, lipids)
+        super(name, proteins, glucids, lipids)
+    end
+end
