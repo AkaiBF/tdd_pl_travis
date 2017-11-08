@@ -82,6 +82,21 @@ RSpec.describe Nutrientes do
       expect(@ejemplo.instance_of? Carnido).to eq(true)
     end
   end
+  describe Pescado do
+    before(:all) do
+      @ejemplo = Pescado.new("Bacalao", 17.7, 0.0, 0.4)
+    end
+    
+    it "has the correct class" do
+      expect(@ejemplo.class).to eq(Pescado)
+    end
+    it "has the correct superclass" do
+      expect(@ejemplo.class.superclass).to eq(Alimento)
+    end
+    it "is an instance of its class" do
+      expect(@ejemplo.instance_of? Pescado).to eq(true)
+    end
+  end
   
 end
 
