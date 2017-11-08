@@ -16,5 +16,5 @@ RSpec.describe List do
         @node1 = Node.new(3)
         @lista.push(@node1)
     end
-    
+end
     
