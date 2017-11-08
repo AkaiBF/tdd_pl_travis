@@ -142,6 +142,20 @@ RSpec.describe Nutrientes do
       expect(@ejemplo.instance_of? Verdura).to eq(true)
     end
   end
-  
+  describe Fruta do
+    before(:all) do
+      @ejemplo = Fruta.new("Manzana", 0.3, 12.4, 0.4)
+    end
+    
+    it "has the correct class" do
+      expect(@ejemplo.class).to eq(Fruta)
+    end
+    it "has the correct superclass" do
+      expect(@ejemplo.class.superclass).to eq(Alimento)
+    end
+    it "is an instance of its class" do
+      expect(@ejemplo.instance_of? Fruta).to eq(true)
+    end
+  end
 end
 
