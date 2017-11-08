@@ -82,3 +82,9 @@ class Alimento
    end
    
 end
+
+class OvoLacteo < Alimento
+    def initialize(name, proteins, glucids, lipids)
+        super(name, proteins, glucids, lipids)
+    end
+end
