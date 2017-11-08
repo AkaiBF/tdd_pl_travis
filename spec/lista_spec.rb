@@ -28,6 +28,12 @@ RSpec.describe List do
         expect(@lista.size).to be 2
     end
     
+    it "can insert data from the beginning" do
+        @node3 = Node.new(7)
+        @lista.insert(@node3)
+        expect(@lista.head.nodo[:value]).to eq(7)
+    end
+    
     it "eliminates data from the beginning" do
         @initialsize = @lista.size
         @lista.truncate()
