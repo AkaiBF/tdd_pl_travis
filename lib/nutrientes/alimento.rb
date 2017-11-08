@@ -52,3 +52,9 @@ class Verdura < Alimento
         super(name, proteins, glucids, lipids)
     end
 end
+
+class Fruta < Alimento
+    def initialize(name, proteins, glucids, lipids)
+        super(name, proteins, glucids, lipids)
+    end
+end
