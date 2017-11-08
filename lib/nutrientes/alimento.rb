@@ -20,7 +20,7 @@ class List
             @tail = nodo
         else
             @tail.nodo[:next_] = nodo
-            nodo.nodo[:_prev] = @tail
+            nodo.nodo[:prev_] = @tail
             @tail = nodo
         end
         @size += 1
