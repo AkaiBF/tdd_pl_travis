@@ -60,7 +60,12 @@ RSpec.describe Nutrientes do
     it "has the correct class" do
       expect(@ejemplo.class).to eq(OvoLacteo)
     end
-
+    it "has the correct superclass" do
+      expect(@ejemplo.class.superclass).to eq(Alimento)
+    end
+    it "is an instance of its class"
+      expect(@ejemplo.instance_of? OvoLacteo).to eq(true)
+    end
   end
   
 end
