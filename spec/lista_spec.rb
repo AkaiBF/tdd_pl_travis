@@ -21,5 +21,11 @@ RSpec.describe List do
         expect(@lista.head).not_to be nil
         expect(@lista.tail).not_to be nil
     end
+    
+    it "can contain more than an element by pushing them" do
+        @node2 = Node.new(2)
+        @lista.push(@node2)
+        expect(@lista.size).to be 2
+    end
 end
     
