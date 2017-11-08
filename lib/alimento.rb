@@ -9,7 +9,7 @@ end
 class List
     attr_reader :head, :tail
     def initialize()
-        @size += 1
+        @size = 0
         @head = nil
         @tail = nil
     end
@@ -23,6 +23,7 @@ class List
             nodo.nodo[:_prev] = @tail
             @tail = nodo
         end
+        @size += 1
     end
 end
     
