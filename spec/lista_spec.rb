@@ -28,10 +28,16 @@ RSpec.describe List do
         expect(@lista.size).to be 2
     end
     
-    it "eliminate data from the beginning" do
+    it "eliminates data from the beginning" do
         @initialsize = @lista.size
         @lista.truncate()
         expect(@lista.size).to eq(@initialsize - 1)
+    end
+    
+    it "eliminates data from the end" do
+       @initialsize = @lista.size
+       @lista.pop()
+       expect(@lista.size).to eq(@initialize - 1)
     end
 end
     
