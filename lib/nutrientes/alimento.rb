@@ -29,6 +29,7 @@ class List
     def truncate
         @head = @head.nodo[:next_]
         @head.nodo[:prev_] = nil
+        @size -= 1
     end
 end
     
