@@ -37,7 +37,7 @@ RSpec.describe List do
     it "eliminates data from the end" do
        @initialsize = @lista.size
        @lista.pop()
-       expect(@lista.size).to eq(@initialize - 1)
+       expect(@lista.size).to eq(@initialsize - 1)
     end
 end
     
