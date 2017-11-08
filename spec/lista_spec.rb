@@ -27,5 +27,11 @@ RSpec.describe List do
         @lista.push(@node2)
         expect(@lista.size).to be 2
     end
+    
+    it "eliminate data from the beginning" do
+        @initialsize = @lista.size
+        @lista.truncate()
+        expect(@list.size).to eq(@initialsize - 1)
+    end
 end
     
