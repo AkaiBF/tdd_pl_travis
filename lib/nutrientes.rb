@@ -1,5 +1,5 @@
 require "nutrientes/version"
-require "alimento"
+require "nutrientes/alimento"
 
 module Nutrientes
   # Your code goes here...
