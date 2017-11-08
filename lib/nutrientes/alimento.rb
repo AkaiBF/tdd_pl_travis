@@ -31,6 +31,12 @@ class List
         @head.nodo[:prev_] = nil
         @size -= 1
     end
+    
+    def pop
+        @tail = @tail.nodo[:prev_]
+        @tail.nodo[:next_] = nil
+        @size -= 1
+    end
 end
     
 
