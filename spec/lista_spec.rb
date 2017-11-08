@@ -31,7 +31,7 @@ RSpec.describe List do
     it "eliminate data from the beginning" do
         @initialsize = @lista.size
         @lista.truncate()
-        expect(@list.size).to eq(@initialsize - 1)
+        expect(@lista.size).to eq(@initialsize - 1)
     end
 end
     
