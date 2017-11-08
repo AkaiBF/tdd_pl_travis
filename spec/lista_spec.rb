@@ -16,5 +16,10 @@ RSpec.describe List do
         @node1 = Node.new(3)
         @lista.push(@node1)
     end
+    
+    it "has a head and a tail" do
+        expect(@lista.head).not_to be nil
+        expect(@lista.tail).not_to be nil
+    end
 end
     
