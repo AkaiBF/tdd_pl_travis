@@ -50,7 +50,18 @@ RSpec.describe Nutrientes do
     it "shows the caloric value" do
       expect(@cerdo.caloric_value).to eq(169)
     end
-    
   end
+  
+  describe OvoLacteo do
+    before(:all) do
+      @ejemplo = OvoLacteo.new
+    end
+    
+    it "has the correct class" do
+      expect(@ejemplo.class).to eq(OvoLacteo)
+    end
+
+  end
+  
 end
 
