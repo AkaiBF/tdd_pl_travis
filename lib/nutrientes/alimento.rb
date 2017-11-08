@@ -7,7 +7,7 @@ class Node
 end
 
 class List
-    attr_reader :head, :tail
+    attr_reader :head, :tail, :size
     def initialize()
         @size = 0
         @head = nil
