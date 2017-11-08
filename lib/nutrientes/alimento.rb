@@ -26,6 +26,18 @@ class List
         @size += 1
     end
     
+    def insert
+        if @size == 0 then
+            @head = nodo
+            @tail = nodo
+        else
+            @head.nodo[:prev_] = nodo
+            nodo.nodo[:next_] = @head
+            @head = nodo
+        end
+        @size += 1
+    end
+    
     def truncate
         if size > 1
             @head = @head.nodo[:next_]
