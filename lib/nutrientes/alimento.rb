@@ -27,15 +27,27 @@ class List
     end
     
     def truncate
-        @head = @head.nodo[:next_]
-        @head.nodo[:prev_] = nil
-        @size -= 1
+        if size > 1
+            @head = @head.nodo[:next_]
+            @head.nodo[:prev_] = nil
+            @size -= 1
+        elsif size == 1
+            @head = nil
+            @tail = nil
+            @size -= 1
+        end
     end
     
     def pop
-        @tail = @tail.nodo[:prev_]
-        @tail.nodo[:next_] = nil
-        @size -= 1
+        if size > 1
+            @tail = @tail.nodo[:prev_]
+            @tail.nodo[:next_] = nil
+            @size -= 1
+        elsif size == 1
+            @tail = nil
+            @head = nil
+            @size -= 1
+        end
     end
 end
     
