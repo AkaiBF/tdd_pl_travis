@@ -46,3 +46,9 @@ class Carbohidratado < Alimento
         super(name, proteins, glucids, lipids)
     end
 end
+
+class Verdura < Alimento
+    def initialize(name, proteins, glucids, lipids)
+        super(name, proteins, glucids, lipids)
+    end
+end
