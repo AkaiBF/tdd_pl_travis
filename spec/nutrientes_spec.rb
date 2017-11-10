@@ -1,3 +1,10 @@
+# Tests of alimento.rb for Lenguajes y Paradigmas de la Programación
+# Universidad de La Laguna
+#
+# @author Ernesto Echeverría González
+# @since 10-11-2017
+# @email alu0100881622@ull.edu.es 
+
 require "spec_helper"
 
 RSpec.describe Nutrientes do
@@ -76,107 +83,142 @@ RSpec.describe Nutrientes do
     end
   end
   
+  # OvoLacteo class' tests
   describe OvoLacteo do
+    # Initialize the tests
     before(:all) do
       @ejemplo = OvoLacteo.new("Huevo frito", 14.1, 0.0, 19.5)
     end
     
+    # Tests the instance's class
     it "has the correct class" do
       expect(@ejemplo.class).to eq(OvoLacteo)
     end
+    # Tests the instance's superclass. It must be Alimento.
     it "has the correct superclass" do
       expect(@ejemplo.class.superclass).to eq(Alimento)
     end
+    # Tests if the object is an instance of the class
     it "is an instance of its class" do
       expect(@ejemplo.instance_of? OvoLacteo).to eq(true)
     end
   end
+  
+  # Carnido class' tests
   describe Carnido do
     before(:all) do
       @ejemplo = Carnido.new("Cerdo", 21.5, 0.0, 6.3)
     end
     
+    # Tests the instance's class
     it "has the correct class" do
       expect(@ejemplo.class).to eq(Carnido)
     end
+    # Tests the instance's superclass. It must be Alimento.
     it "has the correct superclass" do
       expect(@ejemplo.class.superclass).to eq(Alimento)
     end
+    # Tests if the object is an instance of the class
     it "is an instance of its class" do
       expect(@ejemplo.instance_of? Carnido).to eq(true)
     end
   end
+  
+  # Pescado class' tests
   describe Pescado do
     before(:all) do
       @ejemplo = Pescado.new("Bacalao", 17.7, 0.0, 0.4)
     end
     
+    # Tests the instance's class
     it "has the correct class" do
       expect(@ejemplo.class).to eq(Pescado)
     end
+    # Tests the instance's superclass. It must be Alimento.
     it "has the correct superclass" do
       expect(@ejemplo.class.superclass).to eq(Alimento)
     end
+    # Tests if the object is an instance of the class
     it "is an instance of its class" do
       expect(@ejemplo.instance_of? Pescado).to eq(true)
     end
   end
+  
+  # Grasa class' tests
   describe Graso do
     before(:all) do
       @ejemplo = Graso.new("Aceite de oliva", 0.0, 0.2, 99.6)
     end
     
+    # Tests the instance's class
     it "has the correct class" do
       expect(@ejemplo.class).to eq(Graso)
     end
+    # Tests the instance's superclass. It must be Alimento.
     it "has the correct superclass" do
       expect(@ejemplo.class.superclass).to eq(Alimento)
     end
+    # Tests if the object is an instance of the class
     it "is an instance of its class" do
       expect(@ejemplo.instance_of? Graso).to eq(true)
     end
   end
+  
+  # Carbohidratado class' tests
   describe Carbohidratado do
     before(:all) do
       @ejemplo = Carbohidratado.new("Azúcar", 0.0, 99.8, 0.0)
     end
     
+    # Tests the instance's class
     it "has the correct class" do
       expect(@ejemplo.class).to eq(Carbohidratado)
     end
+    # Tests the instance's superclass. It must be Alimento.
     it "has the correct superclass" do
       expect(@ejemplo.class.superclass).to eq(Alimento)
     end
+    # Tests if the object is an instance of the class
     it "is an instance of its class" do
       expect(@ejemplo.instance_of? Carbohidratado).to eq(true)
     end
   end
+  
+  # Verdura class' tests
   describe Verdura do
     before(:all) do
       @ejemplo = Verdura.new("Tomate", 1.0, 3.5, 0.2)
     end
     
+    # Tests the instance's class
     it "has the correct class" do
       expect(@ejemplo.class).to eq(Verdura)
     end
+    # Tests the instance's superclass. It must be Alimento.
     it "has the correct superclass" do
       expect(@ejemplo.class.superclass).to eq(Alimento)
     end
+    # Tests if the object is an instance of the class
     it "is an instance of its class" do
       expect(@ejemplo.instance_of? Verdura).to eq(true)
     end
   end
+  
+  # Fruta class' tests
   describe Fruta do
     before(:all) do
       @ejemplo = Fruta.new("Manzana", 0.3, 12.4, 0.4)
     end
     
+    # Tests the instance's class
     it "has the correct class" do
       expect(@ejemplo.class).to eq(Fruta)
     end
+    # Tests the instance's superclass. It must be Alimento.
     it "has the correct superclass" do
       expect(@ejemplo.class.superclass).to eq(Alimento)
     end
+    # Tests if the object is an instance of the class
     it "is an instance of its class" do
       expect(@ejemplo.instance_of? Fruta).to eq(true)
     end

@@ -1,3 +1,10 @@
+# Tests of list.rb for Lenguajes y Paradigmas de la Programación
+# Universidad de La Laguna
+#
+# @author Ernesto Echeverría González
+# @since 10-11-2017
+# @email alu0100881622@ull.edu.es 
+
 require "spec_helper"
 
 # Node class' tests
