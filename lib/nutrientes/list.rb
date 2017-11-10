@@ -20,7 +20,7 @@ class List
         actual = @head
         while actual != nil do
             yield actual
-            actual = actual.next_
+            actual = actual.nodo[:next_]
         end
     end
     
