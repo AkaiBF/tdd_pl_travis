@@ -14,8 +14,8 @@ class Alimento
     
     # @!method <=>(another)
     #   Method to implement the comparison between two Alimentos
-    #   @param another Object to compare with
-    #   @return 1 if the first object is bigger, 0 if equal and -1 if minor
+    #   @param another [Object] Object to compare with
+    #   @return [Fixnum] 1 if the first object is bigger, 0 if equal and -1 if minor
     def <=>(another)
         if(another.caloric_value > caloric_value)
             return -1
@@ -50,10 +50,10 @@ class Alimento
     
     # @!method initialize (name, proteins, glucids, lipids)
     #   Initialization of the object given its attributes
-    #   @param name Name of the Alimento
-    #   @param proteins Proteins ammount of the Alimento
-    #   @param glucids Glucids ammount of the Alimento
-    #   @param lipids Lipids ammount of the Alimento
+    #   @param name [String] Name of the Alimento
+    #   @param proteins [Fixnum] Proteins ammount of the Alimento
+    #   @param glucids [Fixnum] Glucids ammount of the Alimento
+    #   @param lipids [Fixnum] Lipids ammount of the Alimento
     def initialize (name, proteins, glucids, lipids)
        @name = name
        @proteins = proteins
@@ -63,14 +63,14 @@ class Alimento
     
     # @!method to_s()
     #   Method to transform an object of Alimento to a string
-    #   @return the object as a string
+    #   @return [String] the object as a string
     def to_s() 
        return String.new(@name + ", " + @proteins.to_s + "g proteins, " + @glucids.to_s + "g glucids, " + @lipids.to_s + "g lipids")
     end
    
     # @!method caloric_value()
     #   Calculates the caloric value of the Alimento
-    #   @return The caloric value
+    #   @return [Fixnum] The caloric value
     def caloric_value()
        return (@proteins * 4 + @lipids * 9 + @glucids * 4)
     end
