@@ -25,7 +25,7 @@ RSpec.describe List do
     it "can contain more than an element by pushing them" do
         @node2 = Node.new(2)
         @lista.push(@node2)
-        expect(@lista.size).to be 2
+        expect(@lista.size >= 2).to be true
     end
     
     it "can insert data from the beginning" do
@@ -44,6 +44,10 @@ RSpec.describe List do
        @initialsize = @lista.size
        @lista.pop()
        expect(@lista.size).to eq(@initialsize - 1)
+    end
+    
+    it "is enumerable" do
+        expect(@lista.all? {|dato| dato >= 0}).to be true
     end
 end
     
