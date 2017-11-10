@@ -47,7 +47,7 @@ RSpec.describe List do
     end
     
     it "is enumerable" do
-        expect(@lista.all? {|dato| dato.value >= 0}).to be true
+        expect(@lista.all? {|dato| dato.nodo.value >= 0}).to be true
     end
 end
     
