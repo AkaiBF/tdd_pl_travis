@@ -1,4 +1,4 @@
-# Práctica 6: Test Driven Development
+# Práctica 6, 7 y 8: Test Driven Development, POO:Herencia y POO:Módulos
 ### Lenguajes y Paradigmas de la Programación
 #### Universidad de La Laguna
 ##### Curso 2017-2018
