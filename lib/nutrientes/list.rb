@@ -8,10 +8,20 @@ end
 
 class List
     attr_reader :head, :tail, :size
+    include Enumerable
+    
     def initialize()
         @size = 0
         @head = nil
         @tail = nil
+    end
+    
+    def each
+        actual = @head
+        while actual != nil do
+            yield actual
+            actual = actual.next_
+        end
     end
     
     def push(nodo) 
