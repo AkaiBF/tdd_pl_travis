@@ -1,19 +1,53 @@
 class Alimento
+    include Comparable
     attr_reader :name, :proteins, :glucids, :lipids
-   def initialize (name, proteins, glucids, lipids)
+    
+    def <=>(another)
+        if(another.caloric_value > caloric_value)
+            return -1
+        else
+            if(another.caloric_value < caloric_value)
+                return 1
+            end
+            if (another.proteins > this.proteins)
+                return -1
+            else
+                if(another.proteins < this.proteins)
+                    return 1
+                end
+                if(another.glucids > this.glucids)
+                    return -1
+                else
+                    if(another.glucids < this.glucids)
+                        return 1
+                    end
+                    if(another.lipids > this.lipids)
+                        return -1
+                    else 
+                        if(another.lipids < this.lipids)
+                            return 1
+                        else return 0
+                        end
+                    end
+                end
+            end
+        end
+    end
+    
+    def initialize (name, proteins, glucids, lipids)
        @name = name
        @proteins = proteins
        @glucids = glucids
        @lipids = lipids
-   end
+    end
    
-   def to_s() 
+    def to_s() 
        return String.new(@name + ", " + @proteins.to_s + "g proteins, " + @glucids.to_s + "g glucids, " + @lipids.to_s + "g lipids")
-   end
+    end
    
-   def caloric_value()
+    def caloric_value()
        return (@proteins * 4 + @lipids * 9 + @glucids * 4)
-   end
+    end
    
 end
 
