@@ -3,28 +3,28 @@ class Alimento
     attr_reader :name, :proteins, :glucids, :lipids
     
     def <=>(another)
-        if(another.caloric_value > caloric_value)
+        if(another.caloric_value > @caloric_value)
             return -1
         else
-            if(another.caloric_value < caloric_value)
+            if(another.caloric_value < @caloric_value)
                 return 1
             end
-            if (another.proteins > this.proteins)
+            if (another.proteins > @proteins)
                 return -1
             else
-                if(another.proteins < this.proteins)
+                if(another.proteins < @proteins)
                     return 1
                 end
-                if(another.glucids > this.glucids)
+                if(another.glucids > @glucids)
                     return -1
                 else
-                    if(another.glucids < this.glucids)
+                    if(another.glucids < @glucids)
                         return 1
                     end
-                    if(another.lipids > this.lipids)
+                    if(another.lipids > @lipids)
                         return -1
                     else 
-                        if(another.lipids < this.lipids)
+                        if(another.lipids < @lipids)
                             return 1
                         else return 0
                         end
