@@ -15,7 +15,7 @@ class Node
     
     # @!method initialize(val)
     #   Initialization of a node
-    #   @param val Value to store at the node
+    #   @param val [Object] Value to store at the node
     def initialize(val) 
         @nodo = @@estructura.new(val, nil, nil)
     end
@@ -50,7 +50,7 @@ class List
     
     # @!method push(nodo)
     #   Inserts a node at the beginning of the list
-    #   @param nodo node to insert
+    #   @param nodo [Object] node to insert
     def push(nodo) 
         if @size == 0 then
             @head = nodo
@@ -65,7 +65,7 @@ class List
     
     # @!method insert(nodo)
     #   Inserts a node at the end of the list
-    #   @param nodo node to insert
+    #   @param nodo [Object] node to insert
     def insert(nodo)
         if @size == 0 then
             @head = nodo
