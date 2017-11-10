@@ -5,54 +5,66 @@ RSpec.describe Nutrientes do
     expect(Nutrientes::VERSION).not_to be nil
   end
   
+  # Alimento class' tests
   describe Alimento do
-    
+    # Initialization of the tests
     before(:all) do
       @cerdo = Alimento.new("cerdo", 12, 10, 9)
       @huevo = Alimento.new("huevo", 12, 2, 8)
       @res = Alimento.new("res", 30, 2, 12)
     end
-        
+    
+    # Tests if the object can store a string name
     it "has a name" do
       expect(@cerdo.name).not_to be nil
     end
     
+    # Tests if the object can store a number of proteins
     it "has a proteins ammount" do
       expect(@cerdo.proteins).not_to be nil
     end
     
+    # Tests if the object can store a number of glucids
     it "has a glucids ammount" do
       expect(@cerdo.glucids).not_to be nil
     end
     
+    # Tests if the object can store a number of lipids
     it "has a lipids ammount" do
       expect(@cerdo.lipids).not_to be nil
     end
     
+    # Tests if the name can be shown
     it "shows its name" do
       expect(@cerdo.name).to eq("cerdo")
     end
     
+    # Tests if the number of proteins can be shown
     it "shows its proteins ammount" do
       expect(@cerdo.proteins).to eq(12)
     end
     
+    # Tests if the number of glucids can be shown
     it "shows its glucids ammount" do
       expect(@cerdo.glucids).to eq(10)
     end
     
+    # Tests if the number of lipids can be shown
     it "shows its lipids ammount" do
       expect(@cerdo.lipids).to eq(9)
     end
     
+    # Tests if the object can use a 'to string' method
     it "shows the data" do
       expect(@cerdo.to_s).to eq("cerdo, 12g proteins, 10g glucids, 9g lipids")
     end
     
+    # Tests if the object calculates its caloric value properly
     it "shows the caloric value" do
       expect(@cerdo.caloric_value).to eq(169)
     end
     
+    # Tests if the objects of the class are comparables
     it "is comparable" do
       expect(@cerdo > @huevo).to eq(true)
       expect(@cerdo == @cerdo).to eq(true)
