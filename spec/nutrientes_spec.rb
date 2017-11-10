@@ -9,6 +9,8 @@ RSpec.describe Nutrientes do
     
     before(:all) do
       @cerdo = Alimento.new("cerdo", 12, 10, 9)
+      @huevo = Alimento.new("huevo", 12, 2, 8)
+      @res = Alimento.new("res", 30, 2, 12)
     end
         
     it "has a name" do
@@ -49,6 +51,16 @@ RSpec.describe Nutrientes do
     
     it "shows the caloric value" do
       expect(@cerdo.caloric_value).to eq(169)
+    end
+    
+    it "is comparable" do
+      expect(@cerdo > @huevo).to eq(true)
+      expect(@cerdo == @cerdo).to eq(true)
+      expect(@cerdo < @res).to eq(true)
+      expect(@cerdo >= @huevo).to eq(true)
+      expect(@cerdo >= @cerdo).to eq(true)
+      expect(@cerdo <= @res).to eq(true)
+      expect(@cerdo <= @cerdo).to eq(true)
     end
   end
   
