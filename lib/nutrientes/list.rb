@@ -1,21 +1,45 @@
-class Node 
+# A list class implementation for Lenguajes y Paradigmas de la Programación
+# Universidad de La Laguna
+#
+# @author Ernesto Echeverría González
+# @since 10-11-2017
+# @email alu0100881622@ull.edu.es 
+# @version 1.0.0
+
+# Class Node
+# Defines the container of each element of the list
+# @!attribute r nodo
+class Node
     @@estructura = Struct.new(:value, :next_, :prev_)
     attr_reader :nodo
+    
+    # @!method initialize(val)
+    #   Initialization of a node
+    #   @param val Value to store at the node
     def initialize(val) 
         @nodo = @@estructura.new(val, nil, nil)
     end
 end
 
+# Class List
+# Defines the list
+# @!attribute r head First element of the list
+# @!attribute r tail Last element of the list
+# @!attribute r size Size of the list
 class List
     attr_reader :head, :tail, :size
     include Enumerable
     
+    # @!method initialize()
+    #   Initialization of the list
     def initialize()
         @size = 0
         @head = nil
         @tail = nil
     end
     
+    # @!method each()
+    #   Defines the each method to make use of the Enumerable module
     def each
         actual = @head
         while actual != nil do
@@ -24,6 +48,9 @@ class List
         end
     end
     
+    # @!method push(nodo)
+    #   Inserts a node at the beginning of the list
+    #   @param nodo node to insert
     def push(nodo) 
         if @size == 0 then
             @head = nodo
@@ -36,6 +63,9 @@ class List
         @size += 1
     end
     
+    # @!method insert(nodo)
+    #   Inserts a node at the end of the list
+    #   @param nodo node to insert
     def insert(nodo)
         if @size == 0 then
             @head = nodo
@@ -48,6 +78,8 @@ class List
         @size += 1
     end
     
+    # @!method truncate()
+    #   Deletes a node from the beginning of the list
     def truncate
         if size > 1
             @head = @head.nodo[:next_]
@@ -60,6 +92,8 @@ class List
         end
     end
     
+    # @!method truncate()
+    #   Deletes a node from the end of the list
     def pop
         if size > 1
             @tail = @tail.nodo[:prev_]
