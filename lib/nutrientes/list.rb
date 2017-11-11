@@ -29,6 +29,8 @@ end
 #   @return [Object] The last element of the list 
 # @!attribute [r] size 
 #   @return [Fixnum] Size of the list
+# @!method each()
+#   Defines the each method to make use of the Enumerable module
 class List
     attr_reader :head, :tail, :size
     include Enumerable
