@@ -80,6 +80,12 @@ end
 # Class OvoLacteo
 # Defines an Alimento (or food) derived from milk or eggs
 class OvoLacteo < Alimento
+    # @!method initialize (name, proteins, glucids, lipids)
+    #   Initialization of the object given its attributes
+    #   @param name [String] Name of the Alimento
+    #   @param proteins [Fixnum] Proteins ammount of the Alimento
+    #   @param glucids [Fixnum] Glucids ammount of the Alimento
+    #   @param lipids [Fixnum] Lipids ammount of the Alimento
     def initialize(name, proteins, glucids, lipids)
         super(name, proteins, glucids, lipids)
     end
@@ -88,6 +94,12 @@ end
 # Class Carnido
 # Defines meat and derivates
 class Carnido < Alimento
+    # @!method initialize (name, proteins, glucids, lipids)
+    #   Initialization of the object given its attributes
+    #   @param name [String] Name of the Alimento
+    #   @param proteins [Fixnum] Proteins ammount of the Alimento
+    #   @param glucids [Fixnum] Glucids ammount of the Alimento
+    #   @param lipids [Fixnum] Lipids ammount of the Alimento
     def initialize(name, proteins, glucids, lipids)
         super(name, proteins, glucids, lipids)
     end
@@ -96,6 +108,12 @@ end
 # Class Pescado
 # Defines Fish and Shelfish
 class Pescado < Alimento
+    # @!method initialize (name, proteins, glucids, lipids)
+    #   Initialization of the object given its attributes
+    #   @param name [String] Name of the Alimento
+    #   @param proteins [Fixnum] Proteins ammount of the Alimento
+    #   @param glucids [Fixnum] Glucids ammount of the Alimento
+    #   @param lipids [Fixnum] Lipids ammount of the Alimento
     def initialize(name, proteins, glucids, lipids)
         super(name, proteins, glucids, lipids)
     end
@@ -104,6 +122,12 @@ end
 # Class Graso
 # Defines a food with high fat content
 class Graso < Alimento
+    # @!method initialize (name, proteins, glucids, lipids)
+    #   Initialization of the object given its attributes
+    #   @param name [String] Name of the Alimento
+    #   @param proteins [Fixnum] Proteins ammount of the Alimento
+    #   @param glucids [Fixnum] Glucids ammount of the Alimento
+    #   @param lipids [Fixnum] Lipids ammount of the Alimento
     def initialize(name, proteins, glucids, lipids)
         super(name, proteins, glucids, lipids)
     end
@@ -112,6 +136,12 @@ end
 # Class Carbohidratado
 # Defines food mainly componed by carbohydrates
 class Carbohidratado < Alimento
+    # @!method initialize (name, proteins, glucids, lipids)
+    #   Initialization of the object given its attributes
+    #   @param name [String] Name of the Alimento
+    #   @param proteins [Fixnum] Proteins ammount of the Alimento
+    #   @param glucids [Fixnum] Glucids ammount of the Alimento
+    #   @param lipids [Fixnum] Lipids ammount of the Alimento
     def initialize(name, proteins, glucids, lipids)
         super(name, proteins, glucids, lipids)
     end
@@ -120,6 +150,12 @@ end
 # Class Verdura
 # Defines vegetables
 class Verdura < Alimento
+    # @!method initialize (name, proteins, glucids, lipids)
+    #   Initialization of the object given its attributes
+    #   @param name [String] Name of the Alimento
+    #   @param proteins [Fixnum] Proteins ammount of the Alimento
+    #   @param glucids [Fixnum] Glucids ammount of the Alimento
+    #   @param lipids [Fixnum] Lipids ammount of the Alimento
     def initialize(name, proteins, glucids, lipids)
         super(name, proteins, glucids, lipids)
     end
@@ -128,6 +164,12 @@ end
 # Class Fruta
 # Defines fruits
 class Fruta < Alimento
+    # @!method initialize (name, proteins, glucids, lipids)
+    #   Initialization of the object given its attributes
+    #   @param name [String] Name of the Alimento
+    #   @param proteins [Fixnum] Proteins ammount of the Alimento
+    #   @param glucids [Fixnum] Glucids ammount of the Alimento
+    #   @param lipids [Fixnum] Lipids ammount of the Alimento
     def initialize(name, proteins, glucids, lipids)
         super(name, proteins, glucids, lipids)
     end
