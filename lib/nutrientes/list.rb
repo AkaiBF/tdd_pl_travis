@@ -23,9 +23,9 @@ end
 
 # Class List
 # Defines the list
-# @!attribute r head First element of the list
-# @!attribute r tail Last element of the list
-# @!attribute r size Size of the list
+# @!attribute [r] head First element of the list
+# @!attribute [r] tail Last element of the list
+# @!attribute [r] size Size of the list
 class List
     attr_reader :head, :tail, :size
     include Enumerable
