@@ -63,7 +63,7 @@ class List
         @size += 1
     end
     
-    # @!method insert(nodo)
+    # @!method insert
     #   Inserts a node at the end of the list
     #   @param nodo [Object] node to insert
     def insert(nodo)
@@ -92,7 +92,7 @@ class List
         end
     end
     
-    # @!method truncate()
+    # @!method pop()
     #   Deletes a node from the end of the list
     def pop
         if size > 1
