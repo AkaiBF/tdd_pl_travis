@@ -25,7 +25,7 @@ end
 # Defines the list
 # @!attribute [r] head
 #   @return [Object] The first element of the list 
-# @!attribute [r] tail Last element of the list
+# @!attribute [r] tail
 #   @return [Object] The last element of the list 
 # @!attribute [r] size 
 #   @return [Fixnum] Size of the list
@@ -55,7 +55,7 @@ class List
     
     # @!method push(nodo)
     #   Inserts a node at the beginning of the list
-    #   @param nodo [Object] node to insert
+    #   @param [Object] nodo node to insert
     def push(nodo) 
         if @size == 0 then
             @head = nodo
