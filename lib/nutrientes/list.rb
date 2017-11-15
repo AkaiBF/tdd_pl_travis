@@ -13,9 +13,8 @@ class Node
     @@estructura = Struct.new(:value, :next_, :prev_)
     attr_reader :nodo
     
-    # @!method initialize(val)
-    #   Initialization of a node
-    #   @param val [Object] Value to store at the node
+    # Initialization of a node
+    # @param val [Object] Value to store at the node
     def initialize(val) 
         @nodo = @@estructura.new(val, nil, nil)
     end
@@ -33,7 +32,6 @@ class List
     attr_reader :head, :tail, :size
     include Enumerable
     
-    # @!method initialize()
     #   Initialization of the list
     def initialize()
         @size = 0
@@ -41,8 +39,7 @@ class List
         @tail = nil
     end
     
-    # @!method each()
-    #   Defines the each method to make use of the Enumerable module
+    # Defines the each method to make use of the Enumerable module
     def each
         actual = @head
         while actual != nil do
@@ -66,9 +63,9 @@ class List
         @size += 1
     end
     
-    # @!method insert
-    #   Inserts a node at the end of the list
-    #   @param nodo [Object] node to insert
+    # Inserts a node at the end of the list
+    # @param nodo [Object] node to insert
+    # @return nil
     def insert(nodo)
         if @size == 0 then
             @head = nodo
@@ -81,8 +78,8 @@ class List
         @size += 1
     end
     
-    # @!method truncate()
-    #   Deletes a node from the beginning of the list
+    # Deletes a node from the beginning of the list
+    # @return nil
     def truncate
         if size > 1
             @head = @head.nodo[:next_]
@@ -95,8 +92,8 @@ class List
         end
     end
     
-    # @!method pop()
-    #   Deletes a node from the end of the list
+    # Deletes a node from the end of the list
+    # @return nil
     def pop
         if size > 1
             @tail = @tail.nodo[:prev_]
