@@ -152,7 +152,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>A new instance of Carbohidratado.</p>
+<p>Initialization of the object given its attributes.</p>
 </div></span>
   
 </li>
@@ -188,13 +188,81 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns a new instance of Carbohidratado</p>
+<p>Initialization of the object given its attributes</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Name of the Alimento</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>proteins</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Proteins ammount of the Alimento</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>glucids</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Glucids ammount of the Alimento</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>lipids</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Lipids ammount of the Alimento</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -202,12 +270,12 @@
       <pre class="lines">
 
 
-145
-146
-147</pre>
+136
+137
+138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/nutrientes/alimento.rb', line 145</span>
+      <pre class="code"><span class="info file"># File 'lib/nutrientes/alimento.rb', line 136</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_proteins'>proteins</span><span class='comma'>,</span> <span class='id identifier rubyid_glucids'>glucids</span><span class='comma'>,</span> <span class='id identifier rubyid_lipids'>lipids</span><span class='rparen'>)</span>
     <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_proteins'>proteins</span><span class='comma'>,</span> <span class='id identifier rubyid_glucids'>glucids</span><span class='comma'>,</span> <span class='id identifier rubyid_lipids'>lipids</span><span class='rparen'>)</span>
@@ -223,7 +291,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Nov 13 09:33:27 2017 by
+  Generated on Wed Nov 15 08:56:03 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.3.0).
 </div>
