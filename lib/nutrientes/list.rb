@@ -51,8 +51,7 @@ class List
         end
     end
     
-    # @!method push(nodo)
-    #   Inserts a node at the beginning of the list
+    # Inserts a node at the beginning of the list
     #   @param [Object] nodo node to insert
     def push(nodo) 
         if @size == 0 then
