@@ -52,7 +52,8 @@ class List
     end
     
     # Inserts a node at the beginning of the list
-    #   @param [Object] nodo node to insert
+    # @param [Object] nodo node to insert
+    # @return nil
     def push(nodo) 
         if @size == 0 then
             @head = nodo
