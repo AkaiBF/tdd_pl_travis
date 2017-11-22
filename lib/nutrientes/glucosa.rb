@@ -35,6 +35,6 @@ class Experimento
     # Calculates the Glucemic index
     # @return [FixNum] Glucemic index
     def get_IG()
-        return (get_AIBC(1) / Experimento.new(@glucosa, @glucosa).get_AIBC(1)) * 100
+        return (get_AIBC(1) / Experimento.new(nil, @glucosa, @glucosa).get_AIBC(1)) * 100
     end
 end
