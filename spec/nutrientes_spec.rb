@@ -223,5 +223,83 @@ RSpec.describe Nutrientes do
       expect(@ejemplo.instance_of? Fruta).to eq(true)
     end
   end
+  context "Métodos de orden" do
+    before :each do
+      @lista_prueba = 
+      [OvoLacteo.new("Huevo frito", 14.1, 0.0, 19.5),
+      OvoLacteo.new("Leche de vaca", 3.3, 4.8, 3.2),
+      OvoLacteo.new("Yogurt", 3.8, 4.9, 3.8),
+      Carnido.new("Cerdo", 21.5, 0.0, 6.3),
+      Carnido.new("Ternera", 21.1, 0.0, 3.1),
+      Carnido.new("Pollo", 20.6, 0.0, 5.6),
+      Pescado.new("Bacalao", 17.7, 0.0, 0.4),
+      Pescado.new("Atún", 21.5, 0.0, 15.5),
+      Pescado.new("Salmón", 19.9, 0.0, 13.6),
+      Graso.new("Aceite de oliva", 0.0, 0.2, 99.6),
+      Graso.new("Mantequilla", 0.7, 0.0, 83.2),
+      Graso.new("Chocolate", 5.3, 47.0, 30.0),
+      Carbohidratado.new("Azúcar", 0.0, 99.8, 0.0),
+      Carbohidratado.new("Arroz", 6.8, 77.7, 0.6),
+      Carbohidratado.new("Lentejas", 23.5, 52.0, 1.4),
+      Carbohidratado.new("Papas", 2.0, 15.4, 0.1),
+      Verdura.new("Tomate", 1.0, 3.5, 0.2),
+      Verdura.new("Cebolla", 1.3, 5.8, 0.3),
+      Verdura.new("Calabaza", 1.1, 4.8, 0.1),
+      Fruta.new("Manzana", 0.3, 12.4, 0.4),
+      Fruta.new("Plátano", 1.2, 21.4, 0.2),
+      Fruta.new("Pera", 0.5 ,12.7, 0.3)]
+      
+      def arraytos(array)
+        output = ""
+        array.each do |a|
+          output += a.to_s + "\n"
+        end
+        return output
+      end
+      
+      def sort_for(array)
+        for i in 0..array.length
+          for j in i+1..array.length - 1
+            if array[i] > array[j]
+              array[i] , array[j] = array[j] , array[i]
+            end
+          end
+        end
+        return array
+      end
+      
+      def sort_each(array)
+        array.each do
+          finished = true
+          array.each_with_index do |a, index|
+            if index == array.length - 1 
+              break
+            end
+            if a > array[index + 1]
+              array[index], array[index + 1] = array[index + 1], array[index]
+              finished = false
+            end
+          end
+          if finished 
+            break
+          end
+        end 
+        return array
+      end
+      
+    end
+    
+    it "Time testing"do
+      Benchmark.bmbm do |a| 
+        arraytos(@lista_prueba)
+         a.report("Método sort\n")  { @lista_prueba.dup.sort }
+         #puts @list.dup.sort
+         a.report("Método for\n") { sort_for(@lista_prueba.dup)}
+         a.report("Método each\n") { sort_each(@lista_prueba.dup)}
+      end
+    end
+    
+    
+  end
 end
 
