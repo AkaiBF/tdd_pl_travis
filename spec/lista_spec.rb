@@ -67,17 +67,17 @@ RSpec.describe List do
     
     # Tests if the nodes can be erased from the end of the list when only one element is remaining
     it "eliminates data from the beginning" do
-        @initialsize = @listanueva.size
-        @listanueva.truncate()
-        expect(@listanueva.size).to eq(0)
+        @initialsize = @lista2.size
+        @lista2.truncate()
+        expect(@lista2.size).to eq(0)
     end
     
     # Tests if the nodes can be erased from the beginning of the list when only one element is remaining
     it "eliminates data from the beginning" do
-        @listanueva.insert(@node1)
-        @initialsize = @listanueva.size
-        @listanueva.truncate()
-        expect(@listanueva.size).to eq(0)
+        @lista2.insert(@node1)
+        @initialsize = @lista2.size
+        @lista2.truncate()
+        expect(@lista2.size).to eq(0)
     end
     
     # Tests if the list is enumerable
