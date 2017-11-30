@@ -25,8 +25,10 @@ RSpec.describe List do
     # Initialization of the tests
     before(:all) do
         @lista = List.new()
+        @lista2 = List.new()
         @node1 = Node.new(3)
         @lista.push(@node1)
+        @lista.insert(@node1)
     end
     
     # Tests if the list pointers are not empty while the list has a node
@@ -61,6 +63,21 @@ RSpec.describe List do
        @initialsize = @lista.size
        @lista.pop()
        expect(@lista.size).to eq(@initialsize - 1)
+    end
+    
+    # Tests if the nodes can be erased from the end of the list when only one element is remaining
+    it "eliminates data from the beginning" do
+        @initialsize = @listanueva.size
+        @listanueva.truncate()
+        expect(@listanueva.size).to eq(0)
+    end
+    
+    # Tests if the nodes can be erased from the beginning of the list when only one element is remaining
+    it "eliminates data from the beginning" do
+        @listanueva.insert(@node1)
+        @initialsize = @listanueva.size
+        @listanueva.truncate()
+        expect(@listanueva.size).to eq(0)
     end
     
     # Tests if the list is enumerable
